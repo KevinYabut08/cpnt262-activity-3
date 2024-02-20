@@ -9,10 +9,11 @@ document.getElementById("myClick").onclick = function () {
   document.getElementById(
     "myText"
   ).textContent = `Have a great day ${username}!!!`;
-};
 
-if (passCode == NaN) {
-  console.error(`You are not doing it right!!!`);
-} else {
-  console.log(`You are doing it right!!!`);
-}
+  passCode = document.getElementById("myPass").value;
+  if (/^\d+$/.test(passCode)) {
+    console.log(`You are doing it right!!!`);
+  } else {
+    console.error(`You are not doing it right!!!`);
+  }
+};
